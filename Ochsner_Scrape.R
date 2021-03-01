@@ -1,14 +1,14 @@
-setwd('/Users/davidkaufmann/Documents/Bewerbungen/Job21/Data Analyst Ochsner Sport/Project')
+setwd('PATH')
 
 library('xml2')
 library('rvest')
 library('RSelenium')
-library(stringr)
-library(tidyr)
-library(dplyr)
-library(R.utils)
-library(httr)
-library(robotstxt)
+library('stringr')
+library('tidyr')
+library('dplyr')
+library('R.utils')
+library('httr')
+library('robotstxt')
 
 Sys.setenv(LANGUAGE='en')
 
@@ -200,10 +200,10 @@ Daten<-Daten%>%
   select(!Kategorie_8)
 
 
-write.csv(Daten,'/Users/davidkaufmann/Documents/Bewerbungen/Job21/Data Analyst Ochsner Sport/Project/Daten.csv')
+write.csv(Daten,'PATH/Daten.csv')
 
 #One line for each comment
 Daten_expanded <- Daten[rep(row.names(Daten), Daten$Anzahl), 1:11]
 
-write.csv(Daten_expanded,'/Users/davidkaufmann/Documents/Bewerbungen/Job21/Data Analyst Ochsner Sport/Project/Daten_expanded.csv')
+write.csv(Daten_expanded,'PATH/Daten_expanded.csv')
 
